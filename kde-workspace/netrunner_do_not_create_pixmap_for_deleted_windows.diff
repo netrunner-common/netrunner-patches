@@ -1,0 +1,11 @@
+--- a/kwin/scene.cpp
++++ b/kwin/scene.cpp
+@@ -850,7 +850,7 @@
+ 
+ void WindowPixmap::create()
+ {
+-    if (isValid()) {
++    if (isValid() || toplevel()->isDeleted()) {
+         return;
+     }
+     XServerGrabber grabber();

@@ -1,0 +1,40 @@
+diff --git a/plasma/contents/code/Channel.py b/plasma/contents/code/Channel.py
+index 0b6fb30..8e205b2 100644
+--- a/plasma/contents/code/Channel.py
++++ b/plasma/contents/code/Channel.py
+@@ -68,7 +68,7 @@ class Channel(QGraphicsWidget):
+         self.create_panel()
+         self.createMute()
+         self.createMiddle()
+-        self.create_expander()
++        self.create_configure()
+ 
+     def composeArrangement(self):
+         self.layout.addItem(self.frame)
+@@ -87,7 +87,9 @@ class Channel(QGraphicsWidget):
+     def create_panel(self):
+         self.panel = QGraphicsWidget()
+         self.panel_layout = QGraphicsLinearLayout(Qt.Horizontal)
+-        self.panel_layout.setContentsMargins(6,8,10,6)
++        #self.panel_layout.setContentsMargins(6,8,10,6)
++        # Patched By ll
++        self.panel_layout.setContentsMargins(6,10,20,10)
+         self.panel.setLayout(self.panel_layout)
+ 
+     def createMute(self):
+@@ -113,6 +115,14 @@ class Channel(QGraphicsWidget):
+         self.slider.setMinimum(0)
+         self.slider.volumeChanged.connect( self.on_slider_cb)
+ 
++    def create_configure(self):
++        self.expander = Plasma.IconWidget(self.panel)
++        self.expander.setZValue(10)
++        self.connect(self, SIGNAL("geometryChanged()"), self._resize_widgets)
++        self.expander.setSizePolicy(QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed))
++        self.expander.clicked.connect(self.on_expander_clicked)
++        self.expander.setSvg("widgets/configuration-icons", "configure")
++        
+     def create_expander(self):
+         self.expander = Plasma.IconWidget(self.panel)
+         self.expander.setZValue(10)
+         
