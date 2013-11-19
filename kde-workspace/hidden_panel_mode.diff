@@ -1,0 +1,102 @@
+commit e0211e8c338b807f9d2cc4822a4d8d4190d554f7
+Author: Eike Hein <hein@kde.org>
+Date:   Thu Nov 14 23:23:49 2013 +0100
+
+    Add a hidden panel mode.
+
+diff --git a/plasma/desktop/shell/panelcontroller.cpp b/plasma/desktop/shell/panelcontroller.cpp
+index 07ed70d..46376c4 100644
+--- a/plasma/desktop/shell/panelcontroller.cpp
++++ b/plasma/desktop/shell/panelcontroller.cpp
+@@ -173,6 +173,11 @@ PanelController::PanelController(QWidget* parent)
+     modeLayout->addWidget(m_autoHideTool);
+     connect(m_autoHideTool, SIGNAL(toggled(bool)), this, SLOT(panelVisibilityModeChanged(bool)));
+ 
++    m_hiddenTool = addTool("layer-visible-off", i18n("Hidden"), modeFrame,  Qt::ToolButtonTextBesideIcon, true);
++    m_hiddenTool->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
++    modeLayout->addWidget(m_hiddenTool);
++    connect(m_hiddenTool, SIGNAL(toggled(bool)), this, SLOT(panelVisibilityModeChanged(bool)));
++
+     m_underWindowsTool = addTool("view-fullscreen", i18n("Windows can cover"), modeFrame,  Qt::ToolButtonTextBesideIcon, true);
+     m_underWindowsTool->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
+     modeLayout->addWidget(m_underWindowsTool);
+@@ -459,6 +464,9 @@ void PanelController::setVisibilityMode(PanelView::VisibilityMode mode)
+     case PanelView::AutoHide:
+         m_autoHideTool->setChecked(true);
+         break;
++    case PanelView::Hidden:
++        m_hiddenTool->setChecked(true);
++        break;
+     case PanelView::LetWindowsCover:
+         m_underWindowsTool->setChecked(true);
+         break;
+@@ -480,6 +488,8 @@ PanelView::VisibilityMode PanelController::panelVisibilityMode() const
+         return PanelView::WindowsGoBelow;
+     } else if (m_autoHideTool->isChecked()) {
+         return PanelView::AutoHide;
++    } else if (m_hiddenTool->isChecked()) {
++        return PanelView::Hidden;
+     } else {
+         return PanelView::NormalPanel;
+     }
+@@ -814,6 +824,8 @@ void PanelController::panelVisibilityModeChanged(bool toggle)
+         emit panelVisibilityModeChanged(PanelView::NormalPanel);
+     } else if (sender() == m_autoHideTool) {
+         emit panelVisibilityModeChanged(PanelView::AutoHide);
++    } else if (sender() == m_hiddenTool) {
++        emit panelVisibilityModeChanged(PanelView::Hidden);
+     } else if (sender() == m_underWindowsTool) {
+         emit panelVisibilityModeChanged(PanelView::LetWindowsCover);
+     } else if (sender() == m_overWindowsTool) {
+diff --git a/plasma/desktop/shell/panelcontroller.h b/plasma/desktop/shell/panelcontroller.h
+index 37b3876..f115108 100644
+--- a/plasma/desktop/shell/panelcontroller.h
++++ b/plasma/desktop/shell/panelcontroller.h
+@@ -126,6 +126,7 @@ private:
+     //Panel mode buttons
+     ToolButton *m_normalPanelTool;
+     ToolButton *m_autoHideTool;
++    ToolButton *m_hiddenTool;
+     ToolButton *m_underWindowsTool;
+     ToolButton *m_overWindowsTool;
+ 
+diff --git a/plasma/desktop/shell/panelview.cpp b/plasma/desktop/shell/panelview.cpp
+index 9a45ab6..99c6cf3 100644
+--- a/plasma/desktop/shell/panelview.cpp
++++ b/plasma/desktop/shell/panelview.cpp
+@@ -471,6 +471,13 @@ void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
+             }
+ 
+             QTimer::singleShot(2000, this, SLOT(startAutoHide()));
++        } else if (mode == Hidden) {
++            if (m_mousePollTimer) {
++                m_mousePollTimer->stop();
++            }
++
++            hide();
++            PlasmaApp::self()->panelHidden(true);
+         }
+     }
+ 
+@@ -942,6 +949,9 @@ void PanelView::editingComplete()
+ 
+     if (m_visibilityMode == LetWindowsCover || m_visibilityMode == AutoHide) {
+         startAutoHide();
++    } else if (m_visibilityMode == Hidden) {
++        hide();
++        PlasmaApp::self()->panelHidden(true);
+     }
+ }
+ 
+diff --git a/plasma/desktop/shell/panelview.h b/plasma/desktop/shell/panelview.h
+index d105509..619cd02 100644
+--- a/plasma/desktop/shell/panelview.h
++++ b/plasma/desktop/shell/panelview.h
+@@ -62,6 +62,7 @@ public:
+     enum VisibilityMode {
+         NormalPanel = 0,
+         AutoHide,
++        Hidden,
+         LetWindowsCover,
+         WindowsGoBelow
+     };
