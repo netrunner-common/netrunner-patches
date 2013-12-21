@@ -1,0 +1,14 @@
+diff --git a/kwin/libkwineffects/kwinglplatform.cpp b/kwin/libkwineffects/kwinglplatform.cpp
+index d9eb97d..5be3f0b 100644
+--- a/kwin/libkwineffects/kwinglplatform.cpp
++++ b/kwin/libkwineffects/kwinglplatform.cpp
+@@ -808,6 +808,9 @@ void GLPlatform::detect(OpenGLPlatformInterface platformInterface)
+         } else {
+             m_recommendedCompositor = OpenGL2Compositing;
+         }
++        if (m_driver == Driver_Nouveau) {
++            m_recommendedCompositor = OpenGL1Compositing;
++        }
+ 
+         m_limitedNPOT = m_textureNPOT && m_chipClass < NV40;
+         m_limitedGLSL = m_supportsGLSL && m_chipClass < G80;
