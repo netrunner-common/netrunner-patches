@@ -1,0 +1,14 @@
+diff --git a/ubiquity/plugins/ubi-prepare.py b/ubiquity/plugins/ubi-prepare.py
+index 86a8ab5..11a188d 100644
+--- a/ubiquity/plugins/ubi-prepare.py
++++ b/ubiquity/plugins/ubi-prepare.py
+@@ -153,6 +153,9 @@ class PageKde(PreparePageBase):
+             self.page.vbox1.addWidget(self.prepare_sufficient_space)
+             # TODO we should set these up and tear them down while on this
+             # page.
++            self.prepare_download_updates.setVisible(False)
++            self.prepare_nonfree_software.setVisible(False)
++            self.prepare_foss_disclaimer.setVisible(False)
+             try:
+                 self.prepare_power_source = StateBox(self.page)
+                 if upower.has_battery(): 

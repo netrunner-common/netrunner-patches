@@ -21,3 +21,6 @@ Currently it includes:
    
  * transmission:
    - build with qt4 instead of qt5 (netrunner-build-against-qt4.diff)
+   
+ * ubiquity:
+   - fixes for ubiquity strings (Kubuntu -> Netrunner) and minimum file size + not configure apt and don't show third party codec installation

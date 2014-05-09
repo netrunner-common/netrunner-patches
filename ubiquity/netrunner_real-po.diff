@@ -1,0 +1,1073 @@
+diff --git a/debian/real-po/am.po b/debian/real-po/am.po
+index c1d90a4..041150e 100644
+--- a/debian/real-po/am.po
++++ b/debian/real-po/am.po
+@@ -382,7 +382,7 @@ msgstr "ፋይሎች (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr ""
+ 
+ #. Type: text
+diff --git a/debian/real-po/ar.po b/debian/real-po/ar.po
+index b1eb784..981d2a0 100644
+--- a/debian/real-po/ar.po
++++ b/debian/real-po/ar.po
+@@ -391,7 +391,7 @@ msgstr "ملفات (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr "أين تريد تثبيت كوبونتو؟"
+ 
+ #. Type: text
+diff --git a/debian/real-po/ast.po b/debian/real-po/ast.po
+index 44118e9..23db2a7 100644
+--- a/debian/real-po/ast.po
++++ b/debian/real-po/ast.po
+@@ -399,8 +399,8 @@ msgstr "Ficheros (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "¿Aú quies instalar Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "¿Aú quies instalar Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/be.po b/debian/real-po/be.po
+index 15a1bf0..5e736a9 100644
+--- a/debian/real-po/be.po
++++ b/debian/real-po/be.po
+@@ -399,8 +399,8 @@ msgstr "Файлы (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Куды б вы хацелі ўсталяваць Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Куды б вы хацелі ўсталяваць Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/bg.po b/debian/real-po/bg.po
+index 81083c7..54f90ab 100644
+--- a/debian/real-po/bg.po
++++ b/debian/real-po/bg.po
+@@ -397,7 +397,7 @@ msgstr "Файлове (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr "Къде искате да инсталирате Кубунту?"
+ 
+ #. Type: text
+diff --git a/debian/real-po/bn.po b/debian/real-po/bn.po
+index d14d0dd..0565f9a 100644
+--- a/debian/real-po/bn.po
++++ b/debian/real-po/bn.po
+@@ -394,7 +394,7 @@ msgstr "ফাইল (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr ""
+ 
+ #. Type: text
+diff --git a/debian/real-po/bo.po b/debian/real-po/bo.po
+index 2848498..c5762e6 100644
+--- a/debian/real-po/bo.po
++++ b/debian/real-po/bo.po
+@@ -388,7 +388,7 @@ msgstr "ཡིག་ཆ (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr ""
+ 
+ #. Type: text
+diff --git a/debian/real-po/bs.po b/debian/real-po/bs.po
+index b788c6e..16141c6 100644
+--- a/debian/real-po/bs.po
++++ b/debian/real-po/bs.po
+@@ -396,8 +396,8 @@ msgstr "Datoteka (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Gdje želite instalirati Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Gdje želite instalirati Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/ca.po b/debian/real-po/ca.po
+index 1ceeee9..587822d 100644
+--- a/debian/real-po/ca.po
++++ b/debian/real-po/ca.po
+@@ -396,8 +396,8 @@ msgstr "Fitxers (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "On voleu instal·lar el Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "On voleu instal·lar el Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/cs.po b/debian/real-po/cs.po
+index 0aa8905..8372b3f 100644
+--- a/debian/real-po/cs.po
++++ b/debian/real-po/cs.po
+@@ -397,8 +397,8 @@ msgstr "Soubory (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Kam si přejete Kubuntu nainstalovat?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Kam si přejete Netrunner nainstalovat?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/da.po b/debian/real-po/da.po
+index 746ad18..90819d7 100644
+--- a/debian/real-po/da.po
++++ b/debian/real-po/da.po
+@@ -399,8 +399,8 @@ msgstr "Filer (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Hvor vil du installere Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Hvor vil du installere Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/de.po b/debian/real-po/de.po
+index 9a63024..2581c7f 100644
+--- a/debian/real-po/de.po
++++ b/debian/real-po/de.po
+@@ -403,8 +403,8 @@ msgstr "Dateien (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Wo möchten Sie Kubuntu instalieren?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Wo möchten Sie Netrunner instalieren?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/dz.po b/debian/real-po/dz.po
+index c528396..23ed65a 100644
+--- a/debian/real-po/dz.po
++++ b/debian/real-po/dz.po
+@@ -380,7 +380,7 @@ msgstr ""
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr ""
+ 
+ #. Type: text
+diff --git a/debian/real-po/el.po b/debian/real-po/el.po
+index b08e9f7..b0594a3 100644
+--- a/debian/real-po/el.po
++++ b/debian/real-po/el.po
+@@ -405,8 +405,8 @@ msgstr "Αρχεία (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Πού θέλετε να εγκαταστήσετε το Kubuntu;"
++msgid "Where would you like to install Netrunner?"
++msgstr "Πού θέλετε να εγκαταστήσετε το Netrunner;"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/en_AU.po b/debian/real-po/en_AU.po
+index ba27749..374e5f2 100644
+--- a/debian/real-po/en_AU.po
++++ b/debian/real-po/en_AU.po
+@@ -394,8 +394,8 @@ msgstr "Files (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Where would you like to install Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/en_CA.po b/debian/real-po/en_CA.po
+index d0fe440..3478a7f 100644
+--- a/debian/real-po/en_CA.po
++++ b/debian/real-po/en_CA.po
+@@ -394,8 +394,8 @@ msgstr "Files (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Where would you like to install Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/en_GB.po b/debian/real-po/en_GB.po
+index e5c468c..1412993 100644
+--- a/debian/real-po/en_GB.po
++++ b/debian/real-po/en_GB.po
+@@ -394,8 +394,8 @@ msgstr "Files (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Where would you like to install Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/eo.po b/debian/real-po/eo.po
+index 68fb730..3fa4e15 100644
+--- a/debian/real-po/eo.po
++++ b/debian/real-po/eo.po
+@@ -395,8 +395,8 @@ msgstr "Dosieroj (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Kie vi volas instali Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Kie vi volas instali Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/es.po b/debian/real-po/es.po
+index 684902b..337a964 100644
+--- a/debian/real-po/es.po
++++ b/debian/real-po/es.po
+@@ -397,8 +397,8 @@ msgstr "Archivos (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "¿Dónde quiere instalar Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "¿Dónde quiere instalar Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/et.po b/debian/real-po/et.po
+index c4c3d23..7ab3c1f 100644
+--- a/debian/real-po/et.po
++++ b/debian/real-po/et.po
+@@ -395,8 +395,8 @@ msgstr "Failid (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Kuhu sa soovid Kubuntu paigaldada?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Kuhu sa soovid Netrunner paigaldada?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/eu.po b/debian/real-po/eu.po
+index 1eb79c7..cb67403 100644
+--- a/debian/real-po/eu.po
++++ b/debian/real-po/eu.po
+@@ -397,8 +397,8 @@ msgstr "Fitxategiak (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Non instalatu nahi duzu Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Non instalatu nahi duzu Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/fa.po b/debian/real-po/fa.po
+index 62384d4..580acef 100644
+--- a/debian/real-po/fa.po
++++ b/debian/real-po/fa.po
+@@ -386,7 +386,7 @@ msgstr "پرونده‌ها(${اندازه})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr ""
+ 
+ #. Type: text
+diff --git a/debian/real-po/fi.po b/debian/real-po/fi.po
+index 37c330e..15cbc1f 100644
+--- a/debian/real-po/fi.po
++++ b/debian/real-po/fi.po
+@@ -395,8 +395,8 @@ msgstr "Tiedostot (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Mihin haluat asentaa Kubuntun?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Mihin haluat asentaa Netrunnern?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/fr.po b/debian/real-po/fr.po
+index 90c928c..1297eb2 100644
+--- a/debian/real-po/fr.po
++++ b/debian/real-po/fr.po
+@@ -404,8 +404,8 @@ msgstr "Fichiers (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Où aimeriez-vous installer Kubuntu ?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Où aimeriez-vous installer Netrunner ?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/ga.po b/debian/real-po/ga.po
+index 22815bc..46cbca3 100644
+--- a/debian/real-po/ga.po
++++ b/debian/real-po/ga.po
+@@ -394,7 +394,7 @@ msgstr ""
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr ""
+ 
+ #. Type: text
+diff --git a/debian/real-po/gl.po b/debian/real-po/gl.po
+index bae5cb1..211fadd 100644
+--- a/debian/real-po/gl.po
++++ b/debian/real-po/gl.po
+@@ -398,8 +398,8 @@ msgstr "Ficheiros (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Onde quere instalar Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Onde quere instalar Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/gu.po b/debian/real-po/gu.po
+index 745d7c8..a881ad6 100644
+--- a/debian/real-po/gu.po
++++ b/debian/real-po/gu.po
+@@ -382,7 +382,7 @@ msgstr ""
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr ""
+ 
+ #. Type: text
+diff --git a/debian/real-po/he.po b/debian/real-po/he.po
+index f5dc2e8..7c01dbc 100644
+--- a/debian/real-po/he.po
++++ b/debian/real-po/he.po
+@@ -392,7 +392,7 @@ msgstr "קבצים (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr "היכן להתקין את קובונטו?"
+ 
+ #. Type: text
+diff --git a/debian/real-po/hi.po b/debian/real-po/hi.po
+index 8849269..6ea9d27 100644
+--- a/debian/real-po/hi.po
++++ b/debian/real-po/hi.po
+@@ -392,7 +392,7 @@ msgstr "फ़ाइल (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr "आप कुबनटु को कहां स्थापित करना चाहेंगे ।"
+ 
+ #. Type: text
+diff --git a/debian/real-po/hr.po b/debian/real-po/hr.po
+index 15e4147..f41da5a 100644
+--- a/debian/real-po/hr.po
++++ b/debian/real-po/hr.po
+@@ -395,7 +395,7 @@ msgstr "Datoteke (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr ""
+ 
+ #. Type: text
+diff --git a/debian/real-po/hu.po b/debian/real-po/hu.po
+index 447239c..642d815 100644
+--- a/debian/real-po/hu.po
++++ b/debian/real-po/hu.po
+@@ -396,8 +396,8 @@ msgstr "Fájlok (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Hová szeretné telepíteni a Kubuntut?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Hová szeretné telepíteni a Netrunnert?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/id.po b/debian/real-po/id.po
+index 232f8f2..f3ad23d 100644
+--- a/debian/real-po/id.po
++++ b/debian/real-po/id.po
+@@ -400,8 +400,8 @@ msgstr "Berkas (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Di manakah Anda ingin memasang Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Di manakah Anda ingin memasang Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/is.po b/debian/real-po/is.po
+index 201a5af..eec3bd9 100644
+--- a/debian/real-po/is.po
++++ b/debian/real-po/is.po
+@@ -395,8 +395,8 @@ msgstr "Skrár (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Hvar viltu setja Kubuntu upp?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Hvar viltu setja Netrunner upp?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/it.po b/debian/real-po/it.po
+index a89e591..19bb832 100644
+--- a/debian/real-po/it.po
++++ b/debian/real-po/it.po
+@@ -398,8 +398,8 @@ msgstr "File (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Dove installare Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Dove installare Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/ja.po b/debian/real-po/ja.po
+index 9eeeaae..fe1c1af 100644
+--- a/debian/real-po/ja.po
++++ b/debian/real-po/ja.po
+@@ -401,8 +401,8 @@ msgstr "ファイル (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Kubuntuをどこにインストールしますか?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Netrunnerをどこにインストールしますか?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/ka.po b/debian/real-po/ka.po
+index 879bb84..8ea213c 100644
+--- a/debian/real-po/ka.po
++++ b/debian/real-po/ka.po
+@@ -386,7 +386,7 @@ msgstr ""
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr ""
+ 
+ #. Type: text
+diff --git a/debian/real-po/kk.po b/debian/real-po/kk.po
+index ac1ff62..2f60f33 100644
+--- a/debian/real-po/kk.po
++++ b/debian/real-po/kk.po
+@@ -399,8 +399,8 @@ msgstr "Файлдар (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Kubuntu-ды қайда орнатқыңыз келеді?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Netrunner-ды қайда орнатқыңыз келеді?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/km.po b/debian/real-po/km.po
+index 8b41bd5..318fe5f 100644
+--- a/debian/real-po/km.po
++++ b/debian/real-po/km.po
+@@ -395,8 +395,8 @@ msgstr "ឯកសារ (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "តើ​អ្នក​ចង់​ដំឡើង Kubuntu នៅ​កន្លែង​ណា?"
++msgid "Where would you like to install Netrunner?"
++msgstr "តើ​អ្នក​ចង់​ដំឡើង Netrunner នៅ​កន្លែង​ណា?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/kn.po b/debian/real-po/kn.po
+index 19c46ac..0bb64c7 100644
+--- a/debian/real-po/kn.po
++++ b/debian/real-po/kn.po
+@@ -391,7 +391,7 @@ msgstr ""
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr ""
+ 
+ #. Type: text
+diff --git a/debian/real-po/ko.po b/debian/real-po/ko.po
+index d6f821c..16174de 100644
+--- a/debian/real-po/ko.po
++++ b/debian/real-po/ko.po
+@@ -396,7 +396,7 @@ msgstr "파일 (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr "어느 곳에 쿠분투를 설치하시겠습니까?"
+ 
+ #. Type: text
+diff --git a/debian/real-po/ku.po b/debian/real-po/ku.po
+index 65a354c..b207b0a 100644
+--- a/debian/real-po/ku.po
++++ b/debian/real-po/ku.po
+@@ -392,7 +392,7 @@ msgstr ""
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr ""
+ 
+ #. Type: text
+diff --git a/debian/real-po/lt.po b/debian/real-po/lt.po
+index ec917d1..a285055 100644
+--- a/debian/real-po/lt.po
++++ b/debian/real-po/lt.po
+@@ -397,8 +397,8 @@ msgstr "Failai (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Kur norėtumėte įdiegti Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Kur norėtumėte įdiegti Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/lv.po b/debian/real-po/lv.po
+index acceaeb..5a2abb4 100644
+--- a/debian/real-po/lv.po
++++ b/debian/real-po/lv.po
+@@ -397,8 +397,8 @@ msgstr "Datnes (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Kur vēlaties instalēt Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Kur vēlaties instalēt Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/mk.po b/debian/real-po/mk.po
+index bb6667d..8533d2a 100644
+--- a/debian/real-po/mk.po
++++ b/debian/real-po/mk.po
+@@ -383,7 +383,7 @@ msgstr ""
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr ""
+ 
+ #. Type: text
+diff --git a/debian/real-po/ml.po b/debian/real-po/ml.po
+index ddbc75f..d1464b3 100644
+--- a/debian/real-po/ml.po
++++ b/debian/real-po/ml.po
+@@ -397,7 +397,7 @@ msgstr "രേഖകള്‍ (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr "നിങ്ങള്‍ കുബുണ്ടു എവിടെയാണ് ഇന്‍സ്റ്റാള്‍ ചെയ്യാന്‍ താത്പര്യപ്പെടുന്നത്?"
+ 
+ #. Type: text
+diff --git a/debian/real-po/mr.po b/debian/real-po/mr.po
+index e4d1c9b..4ce6997 100644
+--- a/debian/real-po/mr.po
++++ b/debian/real-po/mr.po
+@@ -388,7 +388,7 @@ msgstr "फाईल्स (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr "तुम्हाला कुबंतु कुठे स्थापित करायला आवडेल?"
+ 
+ #. Type: text
+diff --git a/debian/real-po/my.po b/debian/real-po/my.po
+index 5e54e9a..ee50631 100644
+--- a/debian/real-po/my.po
++++ b/debian/real-po/my.po
+@@ -388,7 +388,7 @@ msgstr "ဖိုင် (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr ""
+ 
+ #. Type: text
+diff --git a/debian/real-po/nb.po b/debian/real-po/nb.po
+index 75aa580..10f7de1 100644
+--- a/debian/real-po/nb.po
++++ b/debian/real-po/nb.po
+@@ -397,8 +397,8 @@ msgstr "Filer (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Hvor vil du installere Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Hvor vil du installere Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/ne.po b/debian/real-po/ne.po
+index 169d90f..a6e4fef 100644
+--- a/debian/real-po/ne.po
++++ b/debian/real-po/ne.po
+@@ -385,7 +385,7 @@ msgstr ""
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr ""
+ 
+ #. Type: text
+diff --git a/debian/real-po/nl.po b/debian/real-po/nl.po
+index 4fddd19..1981ee0 100644
+--- a/debian/real-po/nl.po
++++ b/debian/real-po/nl.po
+@@ -400,8 +400,8 @@ msgstr "Bestanden (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Waar zou u Kubuntu willen installeren?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Waar zou u Netrunner willen installeren?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/nn.po b/debian/real-po/nn.po
+index 3210ae6..2188810 100644
+--- a/debian/real-po/nn.po
++++ b/debian/real-po/nn.po
+@@ -392,7 +392,7 @@ msgstr "Filer (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr ""
+ 
+ #. Type: text
+diff --git a/debian/real-po/pa.po b/debian/real-po/pa.po
+index 74f9bd8..edf73b3 100644
+--- a/debian/real-po/pa.po
++++ b/debian/real-po/pa.po
+@@ -380,7 +380,7 @@ msgstr "ਫਾਇਲਾਂ (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr ""
+ 
+ #. Type: text
+diff --git a/debian/real-po/pl.po b/debian/real-po/pl.po
+index a415f9f..80a8a2e 100644
+--- a/debian/real-po/pl.po
++++ b/debian/real-po/pl.po
+@@ -401,8 +401,8 @@ msgstr "Pliki (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Gdzie zainstalować Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Gdzie zainstalować Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/pt.po b/debian/real-po/pt.po
+index ad6a18d..0064c62 100644
+--- a/debian/real-po/pt.po
++++ b/debian/real-po/pt.po
+@@ -404,8 +404,8 @@ msgstr "Ficheiros (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Onde deseja instalar o Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Onde deseja instalar o Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/pt_BR.po b/debian/real-po/pt_BR.po
+index 4c07333..9b6af15 100644
+--- a/debian/real-po/pt_BR.po
++++ b/debian/real-po/pt_BR.po
+@@ -397,8 +397,8 @@ msgstr "Arquivos (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Onde você gostaria de instalar o Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Onde você gostaria de instalar o Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/ro.po b/debian/real-po/ro.po
+index fa9a817..4d0cd32 100644
+--- a/debian/real-po/ro.po
++++ b/debian/real-po/ro.po
+@@ -397,8 +397,8 @@ msgstr "Fișiere (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Unde vreţi să instalaţi Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Unde vreţi să instalaţi Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/ru.po b/debian/real-po/ru.po
+index 7b33898..83fa273 100644
+--- a/debian/real-po/ru.po
++++ b/debian/real-po/ru.po
+@@ -398,8 +398,8 @@ msgstr "Файлы (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Куда вы хотите установить Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Куда вы хотите установить Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/si.po b/debian/real-po/si.po
+index dff9b14..afcc6dc 100644
+--- a/debian/real-po/si.po
++++ b/debian/real-po/si.po
+@@ -390,7 +390,7 @@ msgstr "ගොනු (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr ""
+ 
+ #. Type: text
+diff --git a/debian/real-po/sk.po b/debian/real-po/sk.po
+index 3626117..3901db6 100644
+--- a/debian/real-po/sk.po
++++ b/debian/real-po/sk.po
+@@ -393,8 +393,8 @@ msgstr "Súbory (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Kam by ste chceli nainštalovať Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Kam by ste chceli nainštalovať Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/sl.po b/debian/real-po/sl.po
+index 9e5c1de..8dbee35 100644
+--- a/debian/real-po/sl.po
++++ b/debian/real-po/sl.po
+@@ -398,8 +398,8 @@ msgstr "Datoteke (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Kam želite namestiti Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Kam želite namestiti Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/sq.po b/debian/real-po/sq.po
+index 5d735d5..1f6ccc6 100644
+--- a/debian/real-po/sq.po
++++ b/debian/real-po/sq.po
+@@ -402,8 +402,8 @@ msgstr "Skedarët (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Ku do të donit ta instalonit Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Ku do të donit ta instalonit Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/sr.po b/debian/real-po/sr.po
+index 0bbe5f7..8558bb3 100644
+--- a/debian/real-po/sr.po
++++ b/debian/real-po/sr.po
+@@ -397,7 +397,7 @@ msgstr "Датотеке (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr "Где желите да инсталирате Кубунту?"
+ 
+ #. Type: text
+diff --git a/debian/real-po/sv.po b/debian/real-po/sv.po
+index 86b9696..81b9beb 100644
+--- a/debian/real-po/sv.po
++++ b/debian/real-po/sv.po
+@@ -397,8 +397,8 @@ msgstr "Filer (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Var vill du installera Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Var vill du installera Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/ta.po b/debian/real-po/ta.po
+index 6fcffe5..9c52667 100644
+--- a/debian/real-po/ta.po
++++ b/debian/real-po/ta.po
+@@ -394,7 +394,7 @@ msgstr "ஆவணங்கள்"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr "கேபுண்டுவை எங்க நிறுவ விரும்புகிறீர்கள்?"
+ 
+ #. Type: text
+diff --git a/debian/real-po/ta_LK.po b/debian/real-po/ta_LK.po
+index d4215c1..28fc551 100644
+--- a/debian/real-po/ta_LK.po
++++ b/debian/real-po/ta_LK.po
+@@ -384,7 +384,7 @@ msgstr ""
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr ""
+ 
+ #. Type: text
+diff --git a/debian/real-po/te.po b/debian/real-po/te.po
+index d449559..3a1e991 100644
+--- a/debian/real-po/te.po
++++ b/debian/real-po/te.po
+@@ -391,7 +391,7 @@ msgstr "ఫైళ్ళు (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr ""
+ 
+ #. Type: text
+diff --git a/debian/real-po/templates.pot b/debian/real-po/templates.pot
+index 30c3790..b776cc3 100644
+--- a/debian/real-po/templates.pot
++++ b/debian/real-po/templates.pot
+@@ -380,7 +380,7 @@ msgstr ""
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr ""
+ 
+ #. Type: text
+diff --git a/debian/real-po/th.po b/debian/real-po/th.po
+index 8071f9f..dcc6027 100644
+--- a/debian/real-po/th.po
++++ b/debian/real-po/th.po
+@@ -388,7 +388,7 @@ msgstr "แฟ้ม (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr ""
+ 
+ #. Type: text
+diff --git a/debian/real-po/tl.po b/debian/real-po/tl.po
+index 8df3b20..3941a20 100644
+--- a/debian/real-po/tl.po
++++ b/debian/real-po/tl.po
+@@ -380,7 +380,7 @@ msgstr ""
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr ""
+ 
+ #. Type: text
+diff --git a/debian/real-po/tr.po b/debian/real-po/tr.po
+index e72477e..fe09dab 100644
+--- a/debian/real-po/tr.po
++++ b/debian/real-po/tr.po
+@@ -395,8 +395,8 @@ msgstr "Dosyalar (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Kubuntu'yu nereye kurmak istersiniz?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Netrunner'yu nereye kurmak istersiniz?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/ug.po b/debian/real-po/ug.po
+index 97e3584..11a2229 100644
+--- a/debian/real-po/ug.po
++++ b/debian/real-po/ug.po
+@@ -397,7 +397,7 @@ msgstr "ھۆججەتلەر (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
++msgid "Where would you like to install Netrunner?"
+ msgstr "كۇبۇنتۇنى قەيەرگە ئورنىتىسىز؟"
+ 
+ #. Type: text
+diff --git a/debian/real-po/uk.po b/debian/real-po/uk.po
+index 475d7ee..89abad1 100644
+--- a/debian/real-po/uk.po
++++ b/debian/real-po/uk.po
+@@ -397,8 +397,8 @@ msgstr "Файли (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Де слід встановити Kubuntu?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Де слід встановити Netrunner?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/vi.po b/debian/real-po/vi.po
+index b00187f..49cc458 100644
+--- a/debian/real-po/vi.po
++++ b/debian/real-po/vi.po
+@@ -394,8 +394,8 @@ msgstr "Các tập tin (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "Bạn muốn cài đặt Kubuntu ở chỗ nào?"
++msgid "Where would you like to install Netrunner?"
++msgstr "Bạn muốn cài đặt Netrunner ở chỗ nào?"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/zh_CN.po b/debian/real-po/zh_CN.po
+index 43f5175..1b34f4e 100644
+--- a/debian/real-po/zh_CN.po
++++ b/debian/real-po/zh_CN.po
+@@ -390,8 +390,8 @@ msgstr "文件 (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "您要把 Kubuntu 安装在哪？"
++msgid "Where would you like to install Netrunner?"
++msgstr "您要把 Netrunner 安装在哪？"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/zh_HK.po b/debian/real-po/zh_HK.po
+index 938b6e1..80491b2 100644
+--- a/debian/real-po/zh_HK.po
++++ b/debian/real-po/zh_HK.po
+@@ -392,8 +392,8 @@ msgstr "檔案 (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "您想要將 Kubuntu 安裝至何處？"
++msgid "Where would you like to install Netrunner?"
++msgstr "您想要將 Netrunner 安裝至何處？"
+ 
+ #. Type: text
+ #. Description
+diff --git a/debian/real-po/zh_TW.po b/debian/real-po/zh_TW.po
+index aac68b0..2ab179a 100644
+--- a/debian/real-po/zh_TW.po
++++ b/debian/real-po/zh_TW.po
+@@ -392,8 +392,8 @@ msgstr "檔案 (${SIZE})"
+ #. Type: text
+ #. Description
+ #: ../ubiquity.templates:58001
+-msgid "Where would you like to install Kubuntu?"
+-msgstr "您想要將 Kubuntu 安裝至何處？"
++msgid "Where would you like to install Netrunner?"
++msgstr "您想要將 Netrunner 安裝至何處？"

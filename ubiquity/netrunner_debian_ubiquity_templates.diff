@@ -1,0 +1,13 @@
+diff --git a/debian/ubiquity.templates b/debian/ubiquity.templates
+index d6ff8a9..c10e5a5 100644
+--- a/debian/ubiquity.templates
++++ b/debian/ubiquity.templates
+@@ -252,7 +252,7 @@ _Description: Files (${SIZE})
+ 
+ Template: ubiquity/text/part_auto_comment_label
+ Type: text
+-_Description: Where would you like to install Kubuntu?
++_Description: Where would you like to install Netrunner?
+ 
+ Template: ubiquity/text/part_advanced_heading_label
+ Type: text

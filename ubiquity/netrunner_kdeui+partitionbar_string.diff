@@ -1,0 +1,48 @@
+diff --git a/ubiquity/frontend/kde_components/PartitionBar.py b/ubiquity/frontend/kde_components/PartitionBar.py
+index a75e784..094b491 100644
+--- a/ubiquity/frontend/kde_components/PartitionBar.py
++++ b/ubiquity/frontend/kde_components/PartitionBar.py
+@@ -250,7 +250,7 @@ class PartitionsBar(QtGui.QWidget):
+         if part.next is None or part.next.index != -1:
+             # if our resize partition is at the end or the next one is not
+             # free space
+-            p = Partition('Kubuntu', new_size, 'auto')
++            p = Partition('Netrunner', new_size, 'auto')
+             p.next = part.next
+             part.next = p
+ 
+diff --git a/ubiquity/frontend/kde_components/testing/partitionbar.py b/ubiquity/frontend/kde_components/testing/partitionbar.py
+index 7b0a157..994d84d 100644
+--- a/ubiquity/frontend/kde_components/testing/partitionbar.py
++++ b/ubiquity/frontend/kde_components/testing/partitionbar.py
+@@ -29,7 +29,7 @@ if __name__ == "__main__":
+     pb2.addPartition("/dev/sdb2", 20000, "ext3")
+     pb2.addPartition("/dev/sdb3", 30000, "fat32")
+     pb2.addPartition("/dev/sdb4", 50000, "ntfs")
+-    pb2.setResizePartition('/dev/sdb2', 5000, 15000, 20000, 'Kubuntu')
++    pb2.setResizePartition('/dev/sdb2', 5000, 15000, 20000, 'Netrunner')
+ 
+     pb2 = PartitionsBar(wid)
+     layout.addWidget(pb2)
+diff --git a/ubiquity/frontend/kde_ui.py b/ubiquity/frontend/kde_ui.py
+index 29b135b..c8f749a 100644
+--- a/ubiquity/frontend/kde_ui.py
++++ b/ubiquity/frontend/kde_ui.py
+@@ -76,7 +76,7 @@ class UbiquityUI(QtGui.QMainWindow):
+         # this to be restartable.
+         signal.siginterrupt(signal.SIGCHLD, False)
+ 
+-        distro_name = "Kubuntu"
++        distro_name = "Netrunner"
+         distro_release = ""
+ 
+         ## setup the release and codename
+@@ -84,7 +84,7 @@ class UbiquityUI(QtGui.QMainWindow):
+             for line in fp:
+                 if "DISTRIB_ID=" in line:
+                     name = str.strip(line.split("=")[1], '\n')
+-                    if name != "Ubuntu":
++                    if name != "Netrunner":
+                         distro_name = name
+                 elif "DISTRIB_RELEASE=" in line:
+                     distro_release = str.strip(line.split("=")[1], '\n')
