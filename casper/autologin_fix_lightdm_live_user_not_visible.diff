@@ -1,0 +1,24 @@
+--- /tmp/squash/usr/share/initramfs-tools/scripts/casper-bottom/15autologin	2014-04-09 20:33:59.000000000 +0200
++++ 15autologin	2014-06-21 16:47:55.000000000 +0200
+@@ -79,6 +79,21 @@
+     if [ -e /root/usr/share/xsessions/plasma-active.desktop ]; then
+         cp /root/usr/share/xsessions/plasma-active.desktop /root/usr/share/xsessions/ubuntu.desktop
+     fi
++
++    # Make live user visible in lightdm
++    if [ -f /root/etc/login.defs ]; then
++       sed -i -r -e "s/^UID_MIN\t\t\t 1000/UID_MIN\t\t\t  999/" /root/etc/login.defs
++    fi
+ fi
+ 
++# SDDM config - by Leszek Lesner
++#if [ -f /root/etc/sddm.conf ]; then
++	# Configure SDDM autologin
++        # Disabled for now as autologin is not working in sddm
++        #sed -i -r \
++        #-e "s/^AutoUser=.*/AutoUser=$USERNAME/" \
++        #-e "s/^LastUser=.*/LastUser=$USERNAME/" \
++        #/root/etc/sddm.conf
++#fi
++
+ log_end_msg
