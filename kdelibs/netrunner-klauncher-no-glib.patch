@@ -1,0 +1,27 @@
+Description: Fixes klauncher issues with glib
+ Fixes some issues with glib and klauncher, see rh#983110 or kde bug: #328571.
+
+--- kde4libs-4.14.2.orig/kinit/klauncher_main.cpp
++++ kde4libs-4.14.2/kinit/klauncher_main.cpp
+@@ -75,10 +75,21 @@ extern "C" KDE_EXPORT int kdemain( int a
+    // WABA: Make sure not to enable session management.
+    putenv(strdup("SESSION_MANAGER="));
+ 
++   // Disable the GLib event loop (rh#983110, kde: #328571)
++   bool wasQtNoGlibSet = (getenv("QT_NO_GLIB") != 0);
++   if (!wasQtNoGlibSet) {
++      setenv("QT_NO_GLIB", "1", true);
++   }
++
+    // We need a QCoreApplication to get a DBus event loop
+    QCoreApplication app(argc, argv);
+    app.setApplicationName( componentData.componentName() );
+ 
++   // Now get rid of QT_NO_GLIB again so launched processes don't inherit it
++   if (!wasQtNoGlibSet) {
++      unsetenv("QT_NO_GLIB");
++   }
++
+    int maxTry = 3;
+    while(true)
+    {
