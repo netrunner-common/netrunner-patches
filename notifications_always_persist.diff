@@ -1,0 +1,46 @@
+diff --git a/applets/notifications/package/contents/ui/Notifications.qml b/applets/notifications/package/contents/ui/Notifications.qml
+index 4312774..e5c2dff 100644
+--- a/applets/notifications/package/contents/ui/Notifications.qml
++++ b/applets/notifications/package/contents/ui/Notifications.qml
+@@ -53,27 +53,15 @@ Column {
+             }
+         }
+ 
+-        for (var i = 0; i < notificationsModel.count; ++i) {
+-            if (notificationsModel.get(i).source == notification.source ||
+-                (notificationsModel.get(i).appName == notification.appName &&
+-                notificationsModel.get(i).summary == notification.summary &&
+-                notificationsModel.get(i).body == notification.body)) {
+-
+-                notificationsModel.remove(i)
+-                break
+-            }
+-        }
+         if (notificationsModel.count > 20) {
+             notificationsModel.remove(notificationsModel.count-1)
+         }
+ 
+-        if (notification.isPersistent) {
+             notification.created = new Date();
+ 
+             notificationsModel.inserting = true;
+             notificationsModel.insert(0, notification);
+             notificationsModel.inserting = false;
+-        }
+ 
+         notificationPositioner.displayNotification(notification);
+     }
+@@ -138,13 +126,6 @@ Column {
+ 
+         onSourceRemoved: {
+             notificationPositioner.closePopup(source);
+-
+-            for (var i = 0; i < notificationsModel.count; ++i) {
+-                if (notificationsModel.get(i).source == source) {
+-                    notificationsModel.remove(i)
+-                    break
+-                }
+-            }
+         }
+ 
+         onNewData: {
