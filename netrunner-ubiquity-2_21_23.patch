@@ -1,0 +1,181 @@
+Description: Netrunner specific patches
+ Replaces Kubuntu strings with Netrunner ones and deactivated 3rd party codecs 
+ or downloads during install
+ .
+Author: Leszek Lesner <leszek@zevenos.com>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: http://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- ubiquity-2.21.23.orig/gui/qt/stepPartAuto.ui
++++ ubiquity-2.21.23/gui/qt/stepPartAuto.ui
+@@ -31,7 +31,7 @@
+    <item>
+     <widget class="QLabel" name="part_auto_comment_label">
+      <property name="text">
+-      <string>Where would you like to install Kubuntu?</string>
++      <string>Where would you like to install Netrunner?</string>
+      </property>
+     </widget>
+    </item>
+--- ubiquity-2.21.23.orig/gui/qt/app.ui
++++ ubiquity-2.21.23/gui/qt/app.ui
+@@ -148,7 +148,7 @@
+           <item>
+            <widget class="QLabel" name="distro_name_label">
+             <property name="text">
+-             <string>Kubuntu</string>
++             <string>Netrunner</string>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+--- ubiquity-2.21.23.orig/scripts/plugininstall.py
++++ ubiquity-2.21.23/scripts/plugininstall.py
+@@ -199,7 +199,7 @@ class Install(install_misc.InstallBase):
+ 
+         self.next_region()
+         self.db.progress('INFO', 'ubiquity/install/apt')
+-        self.configure_apt()
++        #self.configure_apt()
+ 
+         self.configure_plugins()
+ 
+@@ -231,10 +231,10 @@ class Install(install_misc.InstallBase):
+         self.next_region()
+         self.db.progress('INFO', 'ubiquity/install/installing')
+ 
+-        if 'UBIQUITY_OEM_USER_CONFIG' in os.environ:
+-            self.install_oem_extras()
+-        else:
+-            self.install_extras()
++        #if 'UBIQUITY_OEM_USER_CONFIG' in os.environ:
++            #self.install_oem_extras()
++        #else:
++            #self.install_extras()
+ 
+         self.next_region()
+         self.db.progress('INFO', 'ubiquity/install/bootloader')
+@@ -465,7 +465,7 @@ class Install(install_misc.InstallBase):
+         except debconf.DebconfError:
+             domain = ''
+         if hostname == '':
+-            hostname = 'ubuntu'
++            hostname = 'netrunner'
+ 
+         with open(self.target_file('etc/hosts'), 'w') as hosts:
+             print("127.0.0.1\tlocalhost", file=hosts)
+--- ubiquity-2.21.23.orig/ubiquity/misc.py
++++ ubiquity-2.21.23/ubiquity/misc.py
+@@ -849,11 +849,11 @@ def install_size():
+     if min_install_size:
+         return min_install_size
+ 
+-    # Fallback size to 5 GB
+-    size = 5 * 1024 * 1024 * 1024
++    # Fallback size to 8 GB
++    size = 8 * 1024 * 1024 * 1024
+ 
+-    # Maximal size to 8 GB
+-    max_size = 8 * 1024 * 1024 * 1024
++    # Maximal size to 10 GB
++    max_size = 10 * 1024 * 1024 * 1024
+ 
+     try:
+         with open('/cdrom/casper/filesystem.size') as fp:
+@@ -864,8 +864,8 @@ def install_size():
+     # TODO substitute into the template for the state box.
+     min_disk_size = size * 2  # fudge factor
+ 
+-    # Set minimum size to 8GB if current minimum size is larger
+-    # than 8GB and we still have an extra 20% of free space
++    # Set minimum size to 10GB if current minimum size is larger
++    # than 10GB and we still have an extra 20% of free space
+     if min_disk_size > max_size and size * 1.2 < max_size:
+         min_disk_size = max_size
+ 
+--- ubiquity-2.21.23.orig/ubiquity/plugins/ubi-prepare.py
++++ ubiquity-2.21.23/ubiquity/plugins/ubi-prepare.py
+@@ -153,6 +153,9 @@ class PageKde(PreparePageBase):
+             self.page.vbox1.addWidget(self.prepare_sufficient_space)
+             # TODO we should set these up and tear them down while on this
+             # page.
++            self.prepare_download_updates.setVisible(False)
++            self.prepare_nonfree_software.setVisible(False)
++            self.prepare_foss_disclaimer.setVisible(False)
+             try:
+                 self.prepare_power_source = StateBox(self.page)
+                 if upower.has_battery():
+@@ -214,7 +217,7 @@ class PageKde(PreparePageBase):
+         for widget in widgets:
+             text = widget.text()
+             text = text.replace('${RELEASE}', release.name)
+-            text = text.replace('Ubuntu', 'Kubuntu')
++            text = text.replace('Ubuntu', 'Netrunner')
+             widget.setText(text)
+ 
+ 
+--- ubiquity-2.21.23.orig/ubiquity/plugins/ubi-language.py
++++ ubiquity-2.21.23/ubiquity/plugins/ubi-language.py
+@@ -504,8 +504,8 @@ class PageKde(PageBase):
+         misc.drop_privileges()
+         misc.drop_privileges_save()
+         # copy over gtkrc-2.0 to get the themeing right
+-        if os.path.exists("/usr/share/kubuntu-default-settings"):
+-            shutil.copy("/usr/share/kubuntu-default-settings/" +
++        if os.path.exists("/usr/share/netrunner-default-settings"):
++            shutil.copy("/usr/share/netrunner-default-settings/" +
+                         "dot-gtkrc-2.0-kde4",
+                         os.getenv("HOME") + "/.gtkrc-2.0")
+         QDesktopServices.openUrl(QUrl(url))
+--- ubiquity-2.21.23.orig/ubiquity/frontend/kde_ui.py
++++ ubiquity-2.21.23/ubiquity/frontend/kde_ui.py
+@@ -76,7 +76,7 @@ class UbiquityUI(QtGui.QMainWindow):
+         # this to be restartable.
+         signal.siginterrupt(signal.SIGCHLD, False)
+ 
+-        distro_name = "Kubuntu"
++        distro_name = "Netrunner"
+         distro_release = ""
+ 
+         # # setup the release and codename
+@@ -84,7 +84,7 @@ class UbiquityUI(QtGui.QMainWindow):
+             for line in fp:
+                 if "DISTRIB_ID=" in line:
+                     name = str.strip(line.split("=")[1], '\n')
+-                    if name != "Ubuntu":
++                    if name != "Netrunner":
+                         distro_name = name
+                 elif "DISTRIB_RELEASE=" in line:
+                     distro_release = str.strip(line.split("=")[1], '\n')
+--- ubiquity-2.21.23.orig/ubiquity/frontend/kde_components/PartitionBar.py
++++ ubiquity-2.21.23/ubiquity/frontend/kde_components/PartitionBar.py
+@@ -250,7 +250,7 @@ class PartitionsBar(QtGui.QWidget):
+         if part.next is None or part.next.index != -1:
+             # if our resize partition is at the end or the next one is not
+             # free space
+-            p = Partition('Kubuntu', new_size, 'auto')
++            p = Partition('Netrunner', new_size, 'auto')
+             p.next = part.next
+             part.next = p
+ 
+--- ubiquity-2.21.23.orig/ubiquity/frontend/kde_components/testing/partitionbar.py
++++ ubiquity-2.21.23/ubiquity/frontend/kde_components/testing/partitionbar.py
+@@ -29,7 +29,7 @@ if __name__ == "__main__":
+     pb2.addPartition("/dev/sdb2", 20000, "ext3")
+     pb2.addPartition("/dev/sdb3", 30000, "fat32")
+     pb2.addPartition("/dev/sdb4", 50000, "ntfs")
+-    pb2.setResizePartition('/dev/sdb2', 5000, 15000, 20000, 'Kubuntu')
++    pb2.setResizePartition('/dev/sdb2', 5000, 15000, 20000, 'Netrunner')
+ 
+     pb2 = PartitionsBar(wid)
+     layout.addWidget(pb2)
