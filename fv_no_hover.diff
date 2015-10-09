@@ -1,0 +1,22 @@
+diff --git a/containments/desktop/package/contents/ui/FolderItemDelegate.qml b/containments/desktop/package/contents/ui/FolderItemDelegate.qml
+index 505258b..97ef116 100644
+--- a/containments/desktop/package/contents/ui/FolderItemDelegate.qml
++++ b/containments/desktop/package/contents/ui/FolderItemDelegate.qml
+@@ -261,7 +261,7 @@ Item {
+                             target: frame
+                             prefix: "selected"
+                         }
+-                    },
++                    } /*,
+                     State {
+                         name: "hover"
+                         when: hovered && !model.selected
+@@ -279,7 +279,7 @@ Item {
+                             target: frame
+                             prefix: "selected+hover"
+                         }
+-                    }
++                    } */
+                 ]
+             }
+         }

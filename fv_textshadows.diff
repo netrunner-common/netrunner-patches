@@ -1,0 +1,101 @@
+diff --git a/containments/desktop/package/contents/ui/FolderItemDelegate.qml b/containments/desktop/package/contents/ui/FolderItemDelegate.qml
+index 6aaa361..2373eac 100644
+--- a/containments/desktop/package/contents/ui/FolderItemDelegate.qml
++++ b/containments/desktop/package/contents/ui/FolderItemDelegate.qml
+@@ -201,7 +201,7 @@ Item {
+                     Rectangle {
+                         id: textBackground
+ 
+-                        visible: root.isContainment
++                        visible: root.isContainment && !textShadow.visible
+ 
+                         anchors {
+                             left: label.left
+@@ -227,6 +227,76 @@ Item {
+                         text: label.text
+                     }
+ 
++                    ShaderEffect {
++                        id: textShadow
++
++                        x: label.x
++                        y: label.y
++
++                        width: label.width + units.smallSpacing * 2
++                        height: label.height + units.smallSpacing * 2
++
++                        visible: (root.isContainment && main.GridView.view.isRootView)
++
++                        property variant src: ShaderEffectSource {
++                            wrapMode: ShaderEffectSource.ClampToEdge
++
++                            sourceItem: ShaderEffect {
++                                width: label.width + units.smallSpacing * 2
++                                height: label.height + units.smallSpacing * 2
++
++
++                                property variant src: ShaderEffectSource {
++                                    sourceItem: label
++                                    sourceRect: Qt.rect(0, 0, label.width + units.smallSpacing * 2, label.height + units.smallSpacing * 2)
++                                    wrapMode: ShaderEffectSource.ClampToEdge
++                                    width: label.width + units.smallSpacing * 2
++                                    height: label.height + units.smallSpacing * 2
++                                }
++
++                                property variant dx: 1.0 / width
++
++                                fragmentShader: "
++                                    varying vec2 qt_TexCoord0;
++                                    uniform sampler2D src;
++                                    uniform float dx;
++                                    void main(void) {
++                                        float tex =
++                                            texture2D(src, qt_TexCoord0 + vec2(-9.32466 * dx, 0)).a * .0170017 +
++                                            texture2D(src, qt_TexCoord0 + vec2(-7.36886 * dx, 0)).a * .0587253 +
++                                            texture2D(src, qt_TexCoord0 + vec2(-5.41537 * dx, 0)).a * .1384730 +
++                                            texture2D(src, qt_TexCoord0 + vec2(-3.46344 * dx, 0)).a * .2229850 +
++                                            texture2D(src, qt_TexCoord0 + vec2(-2.00000 * dx, 0)).a * .1256310 +
++                                            texture2D(src, qt_TexCoord0 + vec2(-1.46344 * dx, 0)).a * .2229850 +
++                                            texture2D(src, qt_TexCoord0 + vec2( 1.41537 * dx, 0)).a * .1384730 +
++                                            texture2D(src, qt_TexCoord0 + vec2( 3.36886 * dx, 0)).a * .0587253 +
++                                            texture2D(src, qt_TexCoord0 + vec2( 5.32466 * dx, 0)).a * .0170017;
++                                        gl_FragColor = vec4(vec3(0), tex * 1.1);
++                                    }"
++                            }
++                        }
++
++                        property variant dy: 1.0 / height
++
++                        fragmentShader: "
++                            varying vec2 qt_TexCoord0;
++                            uniform sampler2D src;
++                            uniform float dy;
++                            void main(void) {
++                                float tex =
++                                    texture2D(src, qt_TexCoord0 + vec2(0, -9.32466 * dy)).a * .0170017 +
++                                    texture2D(src, qt_TexCoord0 + vec2(0, -7.36886 * dy)).a * .0587253 +
++                                    texture2D(src, qt_TexCoord0 + vec2(0, -5.41537 * dy)).a * .1384730 +
++                                    texture2D(src, qt_TexCoord0 + vec2(0, -3.46344 * dy)).a * .2229850 +
++                                    texture2D(src, qt_TexCoord0 + vec2(0, -2.00000 * dy)).a * .1256310 +
++                                    texture2D(src, qt_TexCoord0 + vec2(0, -1.46344 * dy)).a * .2229850 +
++                                    texture2D(src, qt_TexCoord0 + vec2(0,  1.41537 * dy)).a * .1384730 +
++                                    texture2D(src, qt_TexCoord0 + vec2(0,  3.36886 * dy)).a * .0587253 +
++                                    texture2D(src, qt_TexCoord0 + vec2(0,  5.32466 * dy)).a * .0170017;
++                                    gl_FragColor = vec4(vec3(0), tex * 1.1);
++                            }"
++                    }
++
+                     PlasmaComponents.Label {
+                         id: label
+ 
+@@ -257,7 +327,9 @@ Item {
+ 
+                         horizontalAlignment: root.isPopup ? Text.AlignHLeft : Text.AlignHCenter
+ 
+-                        color: PlasmaCore.ColorScope.textColor
++                        color: textShadow.visible ? "white" : PlasmaCore.ColorScope.textColor
++
++                        onColorChanged: console.log(color)
+ 
+                         text: model.blank ? "" : model.display
+ 
