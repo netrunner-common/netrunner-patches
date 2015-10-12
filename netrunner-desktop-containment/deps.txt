@@ -1,0 +1,39 @@
+Arch/Manjaro Dependencies
+-------
+
+cmake
+extra-cmake-modules
+
+ * Qt5Core (required version >= 5.5.0)
+ * Qt5Gui (required version >= 5.5.0)
+ * Qt5Network (required version >= 5.5.0)
+ * Qt5Qml (required version >= 5.5.0)
+ * Qt5Quick
+ * Qt5QuickWidgets
+ * Qt5DBus
+ * Qt5Widgets
+ * Qt5X11Extras
+ * Qt5Svg
+ * Qt5Concurrent
+ * Qt5 (required version >= 5.4.0)
+ * KF5Auth (required version >= 5.12.0)
+ * ECM (required version >= 0.0.9)
+ * KF5Plasma (required version >= 5.12.0)
+ * KF5PlasmaQuick (required version >= 5.12.0)
+ * KF5DocTools (required version >= 5.12.0)
+ * Gettext
+ * PythonInterp
+ * KF5I18n (required version >= 5.12.0)
+ * KF5KCMUtils (required version >= 5.12.0)
+ * KF5NewStuff (required version >= 5.12.0)
+ * KF5KDELibs4Support (required version >= 5.12.0)
+ * KF5Notifications (required version >= 5.12.0)
+ * KF5NotifyConfig (required version >= 5.12.0)
+ * KF5Attica (required version >= 5.12.0)
+ * KF5Wallet (required version >= 5.12.0)
+ * KF5Runner (required version >= 5.12.0)
+ * KF5GlobalAccel (required version >= 5.12.0)
+ * KF5Declarative (required version >= 5.12.0)
+ * KF5People (required version >= 5.12.0)
+ * KF5DBusAddons (required version >= 5.12.0)
+ * KF5 (required version >= 5.12.0)
