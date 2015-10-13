@@ -5,7 +5,7 @@ Comment=Display the contents of folders
 Type=Service
 Icon=netrunner
 X-KDE-ParentApp=
-X-KDE-ServiceTypes=Plasma/Containment
+X-KDE-ServiceTypes=Plasma/Applet,Plasma/Containment
 
 X-Plasma-API=declarativeappletscript
 X-Plasma-MainScript=ui/main.qml
@@ -18,7 +18,7 @@ X-KDE-PluginInfo-Author=Eike Hein
 X-KDE-PluginInfo-Email=hein@kde.org
 X-KDE-PluginInfo-Name=org.kde.netrunnerdesktop
 X-KDE-PluginInfo-Version=3.0
-X-KDE-PluginInfo-Category=File System
+X-KDE-PluginInfo-Category=Containments
 X-KDE-PluginInfo-Depends=
 X-KDE-PluginInfo-License=GPL v2+
 X-KDE-PluginInfo-EnabledByDefault=true
