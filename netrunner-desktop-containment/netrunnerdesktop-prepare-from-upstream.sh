@@ -17,4 +17,5 @@ curl https://paste.kde.org/pgjzwaltx/fesj84/raw | patch -p3
 find . -type f -print0 | xargs -0 sed -i 's/add_subdirectory(plugins)//g'
 find . -type f -name CMakeLists.txt -print0 | xargs -0 sed -i 's/desktopcontainment/netrunnerdesktop/g'
 find . -type f -print0 | xargs -0 sed -i 's/org\.kde\.plasma\.folder/org.kde.netrunnerdesktop/g'
+find . -type f -print0 | xargs -0 sed -i 's/isFolder:.*/isFolder: true/g'
 cd ..

@@ -3,7 +3,7 @@ Name=Netrunner Desktop
 Comment=Display the contents of folders
 
 Type=Service
-Icon=netrunner
+Icon=homerun
 X-KDE-ParentApp=
 X-KDE-ServiceTypes=Plasma/Applet,Plasma/Containment
 

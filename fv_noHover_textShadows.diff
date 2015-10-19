@@ -1,0 +1,250 @@
+--- a/containments/desktop/package/contents/ui/FolderItemDelegate.qml
++++ b/containments/desktop/package/contents/ui/FolderItemDelegate.qml
+@@ -172,90 +172,167 @@
+ 
+                 imagePath: "widgets/viewitem"
+ 
+-                QIconItem {
+-                    id: icon
++                PlasmaCore.ColorScope {
++                    anchors.fill: parent
+ 
+-                    anchors {
+-                        top: root.isPopup ? undefined : parent.top
+-                        topMargin: units.largeSpacing
+-                        left: root.isPopup ? parent.left : undefined
+-                        leftMargin: units.smallSpacing
+-                        horizontalCenter: root.isPopup ? undefined : parent.horizontalCenter
+-                        verticalCenter: root.isPopup ? parent.verticalCenter : undefined
+-                    }
++                    colorGroup: ((root.isContainment && main.GridView.view.isRootView) ? PlasmaCore.Theme.ComplementaryColorGroup
++                        : PlasmaCore.Theme.NormalColorGroup)
+ 
+-                    width: main.GridView.view.iconSize
+-                    height: main.GridView.view.iconSize
++                    QIconItem {
++                        id: icon
+ 
+-                    opacity: root.isPopup ? (1.3 - selectionButton.opacity) : 1.0
+-
+-                    icon: model.decoration
+-                }
++                        anchors {
++                            top: root.isPopup ? undefined : parent.top
++                            topMargin: units.largeSpacing
++                            left: root.isPopup ? parent.left : undefined
++                            leftMargin: units.smallSpacing
++                            horizontalCenter: root.isPopup ? undefined : parent.horizontalCenter
++                            verticalCenter: root.isPopup ? parent.verticalCenter : undefined
++                        }
+ 
+-                Rectangle {
+-                    id: textBackground
++                        width: main.GridView.view.iconSize
++                        height: main.GridView.view.iconSize
+ 
+-                    visible: root.isContainment
++                        opacity: root.isPopup ? (1.3 - selectionButton.opacity) : 1.0
+ 
+-                    anchors {
+-                        left: label.left
+-                        leftMargin: -units.smallSpacing
+-                        top: label.top
+-                        topMargin: -units.smallSpacing
+-                        right: label.right
+-                        rightMargin: -units.smallSpacing
+-                        bottom: label.bottom
+-                        bottomMargin: -units.smallSpacing
++                        icon: model.decoration
+                     }
+ 
+-                    color: (root.isContainment && main.GridView.view.isRootView) ? theme.textColor : "transparent"
+-                    radius: units.smallSpacing
+-                    opacity: 0.4
+-                }
++                    Rectangle {
++                        id: textBackground
+ 
+-                TextMetrics {
+-                    id: labelMetrics
++                        visible: root.isContainment && !textShadow.visible
+ 
+-                    font: label.font
+-                    elide: Text.ElideNone
+-                    text: label.text
+-                }
++                        anchors {
++                            left: label.left
++                            leftMargin: -units.smallSpacing
++                            top: label.top
++                            topMargin: -units.smallSpacing
++                            right: label.right
++                            rightMargin: -units.smallSpacing
++                            bottom: label.bottom
++                            bottomMargin: -units.smallSpacing
++                        }
+ 
+-                PlasmaComponents.Label {
+-                    id: label
++                        color: (root.isContainment && main.GridView.view.isRootView) ? PlasmaCore.ColorScope.backgroundColor : "transparent"
++                        radius: units.smallSpacing
++                        opacity: 0.4
++                    }
++
++                    TextMetrics {
++                        id: labelMetrics
++
++                        font: label.font
++                        elide: Text.ElideNone
++                        text: label.text
++                    }
++
++                    ShaderEffect {
++                        id: textShadow
++
++                        x: label.x
++                        y: label.y
++
++                        width: label.width + units.smallSpacing * 2
++                        height: label.height + units.smallSpacing * 2
++
++                        visible: (root.isContainment && main.GridView.view.isRootView)
++
++                        property variant src: ShaderEffectSource {
++                            wrapMode: ShaderEffectSource.ClampToEdge
++
++                            sourceItem: ShaderEffect {
++                                width: label.width + units.smallSpacing * 2
++                                height: label.height + units.smallSpacing * 2
++
++
++                                property variant src: ShaderEffectSource {
++                                    sourceItem: label
++                                    sourceRect: Qt.rect(0, 0, label.width + units.smallSpacing * 2, label.height + units.smallSpacing * 2)
++                                    wrapMode: ShaderEffectSource.ClampToEdge
++                                    width: label.width + units.smallSpacing * 2
++                                    height: label.height + units.smallSpacing * 2
++                                }
++
++                                property variant dx: 1.0 / width
++
++                                fragmentShader: "
++                                    varying vec2 qt_TexCoord0;
++                                    uniform sampler2D src;
++                                    uniform float dx;
++                                    void main(void) {
++                                        float tex =
++                                            texture2D(src, qt_TexCoord0 + vec2(-9.32466 * dx, 0)).a * .0170017 +
++                                            texture2D(src, qt_TexCoord0 + vec2(-7.36886 * dx, 0)).a * .0587253 +
++                                            texture2D(src, qt_TexCoord0 + vec2(-5.41537 * dx, 0)).a * .1384730 +
++                                            texture2D(src, qt_TexCoord0 + vec2(-3.46344 * dx, 0)).a * .2229850 +
++                                            texture2D(src, qt_TexCoord0 + vec2(-2.00000 * dx, 0)).a * .1256310 +
++                                            texture2D(src, qt_TexCoord0 + vec2(-1.46344 * dx, 0)).a * .2229850 +
++                                            texture2D(src, qt_TexCoord0 + vec2( 1.41537 * dx, 0)).a * .1384730 +
++                                            texture2D(src, qt_TexCoord0 + vec2( 3.36886 * dx, 0)).a * .0587253 +
++                                            texture2D(src, qt_TexCoord0 + vec2( 5.32466 * dx, 0)).a * .0170017;
++                                        gl_FragColor = vec4(vec3(0), tex * 1.1);
++                                    }"
++                            }
++                        }
+ 
+-                    anchors {
+-                        top: root.isPopup ? undefined : icon.bottom
+-                        topMargin: 2 * units.smallSpacing
+-                        left: root.isPopup ? icon.right : undefined
+-                        leftMargin: units.smallSpacing * 2
+-                        horizontalCenter: root.isPopup ? undefined : parent.horizontalCenter
+-                        verticalCenter: root.isPopup ? parent.verticalCenter : undefined
+-                    }
++                        property variant dy: 1.0 / height
+ 
+-                    width: {
+-                        if (root.isPopup) {
+-                            return parent.width - icon.width - (units.smallSpacing * 4);
++                        fragmentShader: "
++                            varying vec2 qt_TexCoord0;
++                            uniform sampler2D src;
++                            uniform float dy;
++                            void main(void) {
++                                float tex =
++                                    texture2D(src, qt_TexCoord0 + vec2(0, -9.32466 * dy)).a * .0170017 +
++                                    texture2D(src, qt_TexCoord0 + vec2(0, -7.36886 * dy)).a * .0587253 +
++                                    texture2D(src, qt_TexCoord0 + vec2(0, -5.41537 * dy)).a * .1384730 +
++                                    texture2D(src, qt_TexCoord0 + vec2(0, -3.46344 * dy)).a * .2229850 +
++                                    texture2D(src, qt_TexCoord0 + vec2(0, -2.00000 * dy)).a * .1256310 +
++                                    texture2D(src, qt_TexCoord0 + vec2(0, -1.46344 * dy)).a * .2229850 +
++                                    texture2D(src, qt_TexCoord0 + vec2(0,  1.41537 * dy)).a * .1384730 +
++                                    texture2D(src, qt_TexCoord0 + vec2(0,  3.36886 * dy)).a * .0587253 +
++                                    texture2D(src, qt_TexCoord0 + vec2(0,  5.32466 * dy)).a * .0170017;
++                                    gl_FragColor = vec4(vec3(0), tex * 1.1);
++                            }"
++                    }
++
++                    PlasmaComponents.Label {
++                        id: label
++
++                        anchors {
++                            top: root.isPopup ? undefined : icon.bottom
++                            topMargin: 2 * units.smallSpacing
++                            left: root.isPopup ? icon.right : undefined
++                            leftMargin: units.smallSpacing * 2
++                            horizontalCenter: root.isPopup ? undefined : parent.horizontalCenter
++                            verticalCenter: root.isPopup ? parent.verticalCenter : undefined
+                         }
+ 
+-                        return Math.min(labelMetrics.advanceWidth + units.smallSpacing, parent.width - units.smallSpacing * 8);
+-                    }
++                        width: {
++                            if (root.isPopup) {
++                                return parent.width - icon.width - (units.smallSpacing * 4);
++                            }
++
++                            return Math.min(labelMetrics.advanceWidth + units.smallSpacing, parent.width - units.smallSpacing * 8);
++                        }
+ 
+-                    height: undefined // Unset PlasmaComponents.Label's default.
++                        height: undefined // Unset PlasmaComponents.Label's default.
+ 
+-                    textFormat: Text.PlainText
++                        textFormat: Text.PlainText
+ 
+-                    maximumLineCount: root.isPopup ? 1 : plasmoid.configuration.textLines
+-                    wrapMode: Text.Wrap
+-                    elide: Text.ElideRight
++                        maximumLineCount: root.isPopup ? 1 : plasmoid.configuration.textLines
++                        wrapMode: Text.Wrap
++                        elide: Text.ElideRight
+ 
+-                    horizontalAlignment: root.isPopup ? Text.AlignHLeft : Text.AlignHCenter
++                        horizontalAlignment: root.isPopup ? Text.AlignHLeft : Text.AlignHCenter
+ 
+-                    color: (root.isContainment && main.GridView.view.isRootView) ? theme.backgroundColor : theme.textColor
++                        color: textShadow.visible ? "white" : PlasmaCore.ColorScope.textColor
+ 
+-                    text: model.blank ? "" : model.display
++                        text: model.blank ? "" : model.display
+ 
+-                    Component.onCompleted: textFix.disableMouseHandling(label) // FIXME TODO: See https://codereview.qt-project.org/#/c/113758/
++                        Component.onCompleted: textFix.disableMouseHandling(label) // FIXME TODO: See https://codereview.qt-project.org/#/c/113758/
++                    }
+                 }
+ 
+                 Column {
+@@ -306,7 +383,7 @@
+                             target: frame
+                             prefix: "selected"
+                         }
+-                    },
++                    }/*,
+                     State {
+                         name: "hover"
+                         when: hovered && !model.selected
+@@ -315,7 +392,7 @@
+                             target: frame
+                             prefix: "hover"
+                         }
+-                    },
++                    }*/,
+                     State {
+                         name: "selected+hover"
+                         when: hovered && model.selected
